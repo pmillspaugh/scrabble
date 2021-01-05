@@ -1,0 +1,15 @@
+#board-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vw;
+  width: 35vw;
+  background: radial-gradient(black, rgb(80, 10, 10), rgb(138, 17, 17));
+  border-radius: 2vw;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(15, 2vw);
+  grid-template-rows: repeat(15, 2vw);
+}

@@ -1,0 +1,46 @@
+#square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  background: rgb(221, 208, 181);
+}
+
+.triple-word-score,
+.double-word-score,
+.star,
+.triple-letter-score,
+.double-letter-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.2em;
+  font-weight: 400;
+  text-align: center;
+  line-height: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.triple-word-score {
+  background: rgb(253, 99, 76);
+}
+
+.double-word-score {
+  background: rgb(243, 180, 166);
+}
+
+.star {
+  background: rgb(243, 180, 166);
+  background-image: url("../images/star.svg");
+  background-size: 1.8vw 1.8vw;
+}
+
+.triple-letter-score {
+  background: rgb(64, 159, 174);
+}
+
+.double-letter-score {
+  background: rgb(192, 212, 207);
+}

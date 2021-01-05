@@ -1,0 +1,21 @@
+#scorecard {
+  display: flex;
+  background: rgb(249, 239, 152);
+  font-family: "Redressed", cursive;
+  margin-top: 50px;
+}
+
+#paper-margin {
+  width: 3vw;
+  border-right: 1px solid red;
+}
+
+#paper-margin > .top-row {
+  border-bottom: 1px solid blue;
+  height: 36px;
+}
+
+#paper-margin > .row {
+  border-bottom: 1px solid blue;
+  height: 18px;
+}

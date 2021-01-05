@@ -1,0 +1,18 @@
+#letter-count {
+  display: grid;
+  grid-template-columns: repeat(6, 2vw);
+  gap: 0.5vw;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1vw;
+}
+
+#distribution > h1 {
+  color: black;
+  text-align: center;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 500;
+}

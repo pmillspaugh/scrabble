@@ -1,0 +1,52 @@
+/* should define variables for styling, e.g. colors */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Xanh Mono", monospace;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 25vw 50vw 25vw;
+}
+
+#left-column,
+#middle-column,
+#right-column {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(rgb(208, 212, 218), rgb(255, 245, 200));
+}
+
+#left-column {
+  grid-column-start: 1;
+}
+
+#middle-column {
+  grid-column-start: 2;
+  justify-content: space-evenly;
+}
+
+#right-column {
+  grid-column-start: 3;
+}
+
+/* Use spin effect in Board component */
+/* @media (prefers-reduced-motion: no-preference) {
+  .board {
+    animation: board-spin infinite 20s linear;
+  }
+}
+
+@keyframes board-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

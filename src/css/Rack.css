@@ -1,0 +1,50 @@
+#rack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rack > h3 {
+  font-size: 1em;
+}
+
+#rack > h1 {
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+}
+
+#rack-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 17vw;
+  height: 2.5vw;
+  background: linear-gradient(rgb(80, 10, 10), rgb(138, 17, 17));
+}
+
+#rack-bottom {
+  width: 18vw;
+  height: 0.5vw;
+  background: rgb(80, 10, 10);
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1vw;
+}
+
+#buttons > button {
+  margin-top: 2vw;
+  padding: 0.5vw;
+  background: rgb(144, 167, 197);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  letter-spacing: 1pt;
+  border: none;
+  border-radius: 5px;
+}
+
+#buttons > button:hover {
+  cursor: pointer;
+}

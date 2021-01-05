@@ -1,0 +1,22 @@
+#tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2vw;
+  width: 2vw;
+  margin: 0 2px;
+  background: rgb(204, 174, 115);
+  box-shadow: 1px 1px rgb(124, 94, 32);
+  border-radius: 3px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+sub {
+  font-size: 0.5em;
+}
+
+#tile:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  box-shadow: 0 0 10px rgb(124, 94, 32);
+}
