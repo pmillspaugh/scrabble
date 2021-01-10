@@ -17,9 +17,9 @@ const Rack = (props) => {
       <h3>PLAYER {props.player}</h3>
       <h1>{props.name}</h1>
       <div id="rack-top">
-        {randomLetters.map((letter) => (
+        {randomLetters.map((letter, index) => (
           <Tile
-            key={letter.letter} // ! need a unique key for each Tile
+            key={`${letter.letter}${index}`}
             letter={letter.letter}
             points={letter.points}
           />

@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/Square.css";
-import star from "../images/star.svg";
 
 const Square = (props) => {
   let className = "";

@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/Bag.css";
-import bag from "../images/bag.svg";
 
 const Bag = () => {
   return (
