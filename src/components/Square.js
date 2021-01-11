@@ -8,7 +8,7 @@ const Square = (props) => {
   }
   const regex = /-|star/g;
   return (
-    <div id="square">
+    <div className="square">
       <div className={className}>
         {className.replace(regex, " ").toUpperCase()}
       </div>

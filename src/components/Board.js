@@ -2,13 +2,6 @@ import React from "react";
 import Square from "./Square";
 import "../css/Board.css";
 
-/* 
-triple-word: 8
-double-word: 17;
-triple-letter: 10;
-double-letter: 24;
-*/
-
 const tripleWords = [0, 7, 14, 105, 119, 210, 217, 224];
 const doubleWords = [
   16,
@@ -55,7 +48,7 @@ const doubleLetters = [
 
 const squares = [];
 
-// ? Change key to be something other than the index?
+// TODO: change key to be something other than the index?
 // TODO: more elegant solution to style bonus tiles?
 for (let i = 0; i < 225; i++) {
   if (tripleWords.includes(i)) {

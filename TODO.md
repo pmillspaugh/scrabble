@@ -34,12 +34,15 @@
 
 ## Rack
 
-1. Enable drag and drop onto Board
+1. Drag and drop
+
+- position tiles according to where the user clicks (complications due to transform: scale(1.5))
+- reference: https://javascript.info/mouse-drag-and-drop
+
 2. Shuffle tiles on click
 3. On swap tiles click, show message asking which tiles to swap, change button to render "Confirm swap", and re-color tiles as they are clicked
 4. Toggle to hide Rack (OR enable gameplay across devices)
 5. Add user input option to edit player names
-6. Update keys to be unique
 
 ## OTHER
 

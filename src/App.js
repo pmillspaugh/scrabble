@@ -85,4 +85,7 @@ function App() {
   );
 }
 
+// prevents highlighting of selected text
+document.addEventListener("mousedown", (event) => event.preventDefault());
+
 export default App;
