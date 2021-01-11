@@ -1,15 +1,19 @@
 import React from "react";
 import Tile from "./Tile";
-import letters from "../letters";
 import "../css/Rack.css";
 
 const Rack = (props) => {
   const randomLetters = [];
+  const newLetterBag = props.letters;
   for (let i = 0; i < 7; i++) {
-    const randomIndex = Math.floor(Math.random() * letters.length);
-    const randomLetter = letters[randomIndex].letter;
-    const randomLetterPoints = letters[randomIndex].points;
+    // Pick random letter from letter bag (array) and add to rack
+    const randomIndex = Math.floor(Math.random() * props.letters.length);
+    const randomLetter = props.letters[randomIndex].letter;
+    const randomLetterPoints = props.letters[randomIndex].points;
     randomLetters.push({ letter: randomLetter, points: randomLetterPoints });
+
+    newLetterBag.splice(randomIndex, 1); // Remove picked letter from bag
+    // props.onLettersChange(newLetterBag);
   }
 
   return (
@@ -20,6 +24,7 @@ const Rack = (props) => {
         {randomLetters.map((letter, index) => (
           <Tile
             key={`${letter.letter}${index}`}
+            id={`${letter.letter}${index}`}
             letter={letter.letter}
             points={letter.points}
           />

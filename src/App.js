@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./css/App.css";
+import letters from "./letters";
 import ScoreCard from "./components/ScoreCard";
 import Bag from "./components/Bag";
 import Distribution from "./components/Distribution";
@@ -9,14 +10,27 @@ import Rack from "./components/Rack";
 
 // TODO: Move dictionary API call to separate component
 
+// ===================================================================
+
 // Merriam Webster's Collegiate Dictionary API
 // https://dictionaryapi.com/products/api-collegiate-dictionary
 const dictionaryKey = "70dd862e-9f52-4739-b376-f6097807aef8";
 const dictionaryURL =
   "https://www.dictionaryapi.com/api/v3/references/collegiate/json/";
 
+// ===================================================================
+
 function App() {
-  const [searchWord, setSearchWord] = useState("gumption");
+  const [letterBag, setLetterBag] = useState(letters);
+
+  // ! letterBag is mysteriously removing random letters after each Rack render
+  function handleLettersChange(newLetterBag) {
+    setLetterBag(newLetterBag);
+  }
+
+  // ===================================================================
+
+  const [searchWord, setSearchWord] = useState("bingo");
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -24,7 +38,7 @@ function App() {
       .then((response) => response.json())
       .then(
         (json) => {
-          console.log(json[0].def[0].sseq[0][0][1].dt[0][1]);
+          // console.log(json[0].def[0].sseq[0][0][1].dt[0][1]);
         },
         (error) => {
           setError(error);
@@ -35,16 +49,18 @@ function App() {
     return () => {};
   }, [searchWord]);
 
-  // TODO: handle error with message that word is not valid
+  // TODO: handle error properly
   if (error) {
     setSearchWord("");
     return <div>Error: {error.message}</div>;
   }
+  // ===================================================================
+
   return (
     <div className="app-container">
       <section id="left-column">
         <ScoreCard />
-        <Bag />
+        <Bag letters={letterBag} />
         <Distribution />
       </section>
       <section id="middle-column">
@@ -52,8 +68,18 @@ function App() {
         <Board />
       </section>
       <section id="right-column">
-        <Rack name="David Foster Wallace" player="1" />
-        <Rack name="Charles Dickens" player="2" />
+        <Rack
+          name="David Foster Wallace"
+          player="1"
+          letters={letterBag}
+          onLettersChange={handleLettersChange}
+        />
+        <Rack
+          name="Charles Dickens"
+          player="2"
+          letters={letterBag}
+          onLettersChange={handleLettersChange}
+        />
       </section>
     </div>
   );

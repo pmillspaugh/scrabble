@@ -1,4 +1,4 @@
-.tile {
+.title-tile {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,10 +13,4 @@
 
 sub {
   font-size: 0.5em;
-}
-
-.tile:hover {
-  cursor: pointer;
-  transform: scale(1.5);
-  box-shadow: 0 0 10px rgb(124, 94, 32);
 }

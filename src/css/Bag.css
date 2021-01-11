@@ -17,8 +17,11 @@
   font-size: 28px;
 }
 
-/* TODO */
-/* on hover, the bag should scale, wiggle, and display the number of letter tiles remaining */
+#bag > h3 {
+  margin-top: 75px;
+  color: rgb(200, 200, 200);
+}
+
 #bag:hover {
   cursor: pointer;
   transition: transform 0.5s ease-in-out;

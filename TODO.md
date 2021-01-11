@@ -12,6 +12,8 @@
 2. Dynamically setSearchWord based on user input
 3. Set up proper error handling
 4. Add cleanup function if necessary
+5. Validate word correctly (i.e. must be an english word, etc.)
+6. Provide definition & audio pronunciation
 
 ## ScoreCard
 
